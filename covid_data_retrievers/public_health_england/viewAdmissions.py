@@ -12,6 +12,7 @@ class ViewAdmissions():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'newAdmissions': 'newAdmissions',
             'cumAdmissions': 'cumAdmissions'}))
     
@@ -19,6 +20,7 @@ class ViewAdmissions():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'cumAdmissionsByAge': 'cumAdmissionsByAge'}))
 
     

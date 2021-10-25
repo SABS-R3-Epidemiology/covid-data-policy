@@ -18,6 +18,7 @@ class ViewVaccinations():
         assert dateType in [ViewVaccinations.DateType.PUBLISH_DATE, ViewVaccinations.DateType.VACCINATION_DATE]
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date':'date',
+            'areaName': 'areaName',
             f'newPeopleVaccinatedCompleteBy{self.dateTypeMap[dateType]}Date':
                 f'newPeopleVaccinatedCompleteBy{self.dateTypeMap[dateType]}Date',
             f'newPeopleVaccinatedFirstDoseBy{self.dateTypeMap[dateType]}Date':
@@ -37,6 +38,7 @@ class ViewVaccinations():
         assert dateType in [ViewVaccinations.DateType.PUBLISH_DATE, ViewVaccinations.DateType.VACCINATION_DATE]
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date':'date',
+            'areaName': 'areaName',
             f'newPeopleVaccinatedCompleteBy{self.dateTypeMap[dateType]}Date':
                 f'newPeopleVaccinatedCompleteBy{self.dateTypeMap[dateType]}Date',
             f'newPeopleVaccinatedFirstDoseBy{self.dateTypeMap[dateType]}Date':
@@ -50,6 +52,7 @@ class ViewVaccinations():
         assert dateType in [ViewVaccinations.DateType.PUBLISH_DATE, ViewVaccinations.DateType.VACCINATION_DATE]
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date':'date',
+            'areaName': 'areaName',
             f'cumPeopleVaccinatedCompleteBy{self.dateTypeMap[dateType]}Date':
                 f'cumPeopleVaccinatedCompleteBy{self.dateTypeMap[dateType]}Date',
             f'cumPeopleVaccinatedFirstDoseBy{self.dateTypeMap[dateType]}Date':
@@ -61,6 +64,7 @@ class ViewVaccinations():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'vaccinationsAgeDemographics':'vaccinationsAgeDemographics'}))
 
     dateTypeMap = {

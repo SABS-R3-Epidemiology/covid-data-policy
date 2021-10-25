@@ -19,6 +19,7 @@ class ViewCases():
         assert dateType in [ViewCases.DateType.PUBLISH_DATE, ViewCases.DateType.SPECIMEN_DATE], "Invalid Date Type"
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             f'newCasesBy{self.dateTypeMap[dateType]}Date':
                 f'newCasesBy{self.dateTypeMap[dateType]}Date',
             f'cumCasesBy{self.dateTypeMap[dateType]}Date':
@@ -35,6 +36,7 @@ class ViewCases():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'alertLevel': 'alertLevel'}))
 
     dateTypeMap = {

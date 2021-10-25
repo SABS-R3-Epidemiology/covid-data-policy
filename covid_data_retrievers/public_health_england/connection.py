@@ -29,7 +29,7 @@ class Connection:
         
         while response.status_code == 200:
             data = response.json()
-            print(params['page'])
+            print('Performed Request')
             for row in data['data']:
                 yield row
 

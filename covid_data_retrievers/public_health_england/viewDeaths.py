@@ -17,7 +17,8 @@ class ViewDeaths():
         conn = Connection()
         assert dateType in [ViewDeaths.DateType.PUBLISH_DATE, ViewDeaths.DateType.DEATH_DATE], "Invalid Date Type"
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
-            {'date': 'date', 
+            {'date': 'date',
+            'areaName': 'areaName', 
             f'newDeathsBy{self.dateTypeMap[dateType]}Date':
                 f'newDeathsBy{self.dateTypeMap[dateType]}Date', 
             f'cumDeathsBy{self.dateTypeMap[dateType]}Date':

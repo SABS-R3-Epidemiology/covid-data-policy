@@ -13,6 +13,7 @@ class ViewTests():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'newLFDTests': 'newLFDTests',
             'cumLFDTests':'cumLFDTests'}))
 
@@ -20,6 +21,7 @@ class ViewTests():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'newPCRTestsByPublishDate': 'newPCRTestsByPublishDate',
             'cumPCRTestsByPublishDate':'cumPCRTestsByPublishDate'}))
     
@@ -27,6 +29,7 @@ class ViewTests():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'newAntibodyTestsByPublishDate': 'newAntibodyTestsByPublishDate',
             'cumAntibodyTestsByPublishDate':'cumAntibodyTestsByPublishDate'}))
 
@@ -34,6 +37,7 @@ class ViewTests():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'newPillarOneTestsByPublishDate': 'newPillarOneTestsByPublishDate',
             'cumPillarOneTestsByPublishDate': 'cumPillarOneTestsByPublishDate',
             'capacityPillarOne': 'capacityPillarOne'}))
@@ -42,6 +46,7 @@ class ViewTests():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'newPillarTwoTestsByPublishDate': 'newPillarTwoTestsByPublishDate',
             'cumPillarTwoTestsByPublishDate': 'cumPillarTwoTestsByPublishDate',
             'capacityPillarTwo': 'capacityPillarTwo'}))
@@ -50,6 +55,7 @@ class ViewTests():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'newPillarThreeTestsByPublishDate': 'newPillarThreeTestsByPublishDate',
             'cumPillarThreeTestsByPublishDate': 'cumPillarThreeTestsByPublishDate',
             'capacityPillarThree': 'capacityPillarThree'}))
@@ -58,6 +64,7 @@ class ViewTests():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'newPillarFourTestsByPublishDate': 'newPillarFourTestsByPublishDate',
             'cumPillarFourTestsByPublishDate': 'cumPillarFourTestsByPublishDate',
             'capacityPillarFour': 'capacityPillarFour'}))
@@ -66,6 +73,7 @@ class ViewTests():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'newPillarOneTwoTestsByPublishDate': 'newPillarOneTwoTestsByPublishDate',
             'cumPillarOneTwoTestsByPublishDate': 'cumPillarOneTwoTestsByPublishDate',
             'capacityPillarOneTwo': 'capacityPillarOneTwo'}))
@@ -74,6 +82,7 @@ class ViewTests():
         conn = Connection()
         return list(conn.get(conn.makeAreaFilter(areaType, areaName),
             {'date': 'date',
+            'areaName': 'areaName',
             'newPillarOneTestsByPublishDate': 'newPillarOneTestsByPublishDate',
             'cumPillarOneTestsByPublishDate': 'cumPillarOneTestsByPublishDate',
             'capacityPillarOne': 'capacityPillarOne',
